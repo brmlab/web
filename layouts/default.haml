@@ -1,0 +1,27 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %title
+      Hackerspace Prague [brmlab]
+    %link{:href => "/style.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
+  %body
+    #main
+      = yield
+    #sidebar
+      %a{:href => "/index.html"}
+        %img{:src => "brmlab.png"}
+      %ul
+        %li
+          %a{:href => "/index.html"} About
+        %li
+          %a{:href => "/index-join.html"} Join
+        %li
+          %a{:href => "/index-events.html"} Events
+        %li
+          %a{:href => "/index-organisation.html"} Organisation
+        %li
+          %a{:href => "/index-donate.html"} Donate
+      %ul
+        %li
+          %a{:href => "/start"} Wiki
