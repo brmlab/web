@@ -81,3 +81,7 @@ a:hover {
   font-size: 14px;
   line-height: 20px;
 }
+
+#flickrphotos a img {
+  margin: 4px;
+}

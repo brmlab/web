@@ -1,2 +1,37 @@
 %h1 Donate
-%p foo trololol blabla
+
+%h2 Wire transfer
+
+%p We have a Fio bank account. You can transfer money in the following ways:
+
+%ul
+  %li <b>CZK</b> transfers: 2500079551/2010 (preferred)<br/>Slovak domestic wire transfer: 2500079551/8330<br/>IBAN SK1683300000002500079551 BIC FIOZSKBAXXX
+  %li <b>EUR</b> transfers: 2100079552/2010<br/>Slovak domestic wire transfer: 2100079552/8330<br/>IBAN SK0783300000002100079552 BIC FIOZSKBAXXX
+  %li <b>USD</b> transfers: 2900079550/2010<br/>Slovak domestic wire transfer: 2900079550/8330<br/>IBAN SK2583300000002900079550 BIC FIOZSKBAXXX
+
+%h2 Bitcoin
+
+%p We accept bitcoins at the following address: <a href="http://blockexplorer.com/address/1BRMLAB7nryYgFGrG8x9SYaokb8r2ZwAsX">1BRMLAB7nryYgFGrG8x9SYaokb8r2ZwAsX</a>
+
+%h2 Paypal
+
+%form{ :action => "https://www.paypal.com/cgi-bin/webscr", :method => "post" }
+  %input{ :type => "hidden", :name => "cmd", :value => "_donations" }
+  %input{ :type => "hidden", :name => "business", :value => "rada@brmlab.cz" }
+  %input{ :type => "hidden", :name => "lc", :value => "US" }
+  %input{ :type => "hidden", :name => "item_name", :value => "(Hackerspace) Brmlab, o.s." }
+  %input{ :type => "hidden", :name => "no_note", :value => "0" }
+  %input{ :type => "hidden", :name => "currency_code", :value => "EUR" }
+  %input{ :type => "hidden", :name => "bn", :value => "PP-DonationsBF:x-click-but04.gif:NonHostedGuest" }
+  %input{ :type => "image", :src => "https://www.paypal.com/en_US/i/btn/x-click-but04.gif", :name => "submit" }
+
+%h2 Paysec
+
+%a{ :href => "https://gateway.paysec.cz/GateWay.aspx?MicroaccountNumber=3355275&MessageForTarget=Thank+you!&OrderId=donation&BackURL=http%3a%2f%2fbrmlab.cz%2f&&CancelURL=http%3a%2f%2fbrmlab.cz%2f" }
+  %img{ :src => "https://www.paysec.cz/CmsPage.aspx?id=buttonTypeS3&lang=en" }
+
+%h2 Flattr
+
+%a{ :href => "http://flattr.com/thing/220653/brmlab-on-Flattr", :target => "_blank" }
+  %img{ :src => "http://api.flattr.com/button/flattr-badge-large.png", :alt => "Flattr this", :title => "Flattr this" }
+
