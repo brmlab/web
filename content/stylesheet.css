@@ -85,3 +85,8 @@ a:hover {
 #flickrphotos a img {
   margin: 4px;
 }
+
+#flickrphotos #photos2soup {
+  clear: both;
+  float: right;
+}
