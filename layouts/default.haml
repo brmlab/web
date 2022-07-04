@@ -2,11 +2,13 @@
 %html{:lang => "en"}
   %head
     %meta{:charset => "utf-8"}
-    %meta{:name => "description", :content => "Brmlab is a non-profit, community-run hackerspace in Prague. We provide a space where people who make things can come to share tools and knowledge."}/
+    %meta{:name => "description", :content => "Brmlab is a non-profit, community-run hackerspace in Prague. We provide a space where people who make things can come to share tools and knowledge."}
     %title
       Hackerspace Prague [brmlab]
     %link{:href => "/style.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
   %body
+    / !!! Do not edit the .html files in /var/www. Use nanoc in /root/web and don't forget to commit to git! !!!
+    / !!! Every time a generated html file is manually edited god kills a kitten!
     #main
       = yield
     #sidebar
@@ -25,6 +27,8 @@
           %a{:href => "/index-organisation.html"} Organisation
         %li
           %a{:href => "/index-donate.html"} Donate
+        %li
+          %a{:href => "/index-press.html"} Press
       %ul
         %li
           %a{:href => "/start"} Wiki
@@ -38,16 +42,18 @@
       %a{ :href => "http://facebook.com/brmlab" }
         %img{ :src => "/facebook.png" }
       %br
+
       %a{ :href => "http://github.com/brmlab" }
         %img{ :src => "/github.png" }
-      %a{ :href => "http://nat.brmlab.cz/phtagr/" }
-        %img{ :src => "/phtagr.png" }
+      -# %a{ :href => "http://nat.brmlab.cz/phtagr/" }
+        -# %img{ :src => "/phtagr.png" }
       %a{ :href => "http://flickr.com/photos/brmlab" }
         %img{ :src => "/flickr.png" }
       %a{ :href => "javascript:alert('+420 608 801 582');" }
         %img{ :src => "/phone.png" }
-      %br
+      -# %br
+      %a{ :href => "https://discord.gg/4qMfFKa" }
+        %img{ :src => "/discord.png" }
 
       %br
-      %p
-        %img{ :src => "/brmstatus.png" }
+      %iframe{:src => "/status-renderer/lab-status.php", :style => "width:75%; height:250px", :frameborder => "0", :scrolling => "no", :align => "right"}
