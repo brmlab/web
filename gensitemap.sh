@@ -17,4 +17,5 @@ done
 echo "Static pages that will be appended to sitemap: $SITEMAP"
 echo "$SITEMAP" > sitemap-static.tmp
 
-(zcat data/cache/sitemap.xml.gz; echo "") | sed -e "/<\\/urlset/ {r sitemap-static.tmp" -e 'N}' | gzip > sitemap.xml.gz
+(zcat data/cache/sitemap.xml.gz; echo "") | sed -e "/<\\/urlset/ {r sitemap-static.tmp" -e 'N}' > sitemap.xml
+cat sitemap.xml | gzip > sitemap.xml.gz
