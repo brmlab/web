@@ -3,57 +3,82 @@
   %head
     %meta{:charset => "utf-8"}
     %meta{:name => "description", :content => "Brmlab is a non-profit, community-run hackerspace in Prague. We provide a space where people who make things can come to share tools and knowledge."}
-    %title
-      Hackerspace Prague [brmlab]
+    %title Hackerspace Prague [brmlab]
     %link{:href => "/style.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
+    %link{:rel => "icon", :type => "image/x-icon", :href => "/favicon.ico"}
+    %meta{:property => "og:title", :content => "Brmlab - Hackerspace Prague"}
+    %meta{:property => "og:type", :content => "website"}
+    %meta{:property => "og:url", :content => "https://brmlab.cz"}
+    %meta{:property => "og:image", :content => "https://brmlab.cz/brmlab.png"}
+    %meta{:property => "og:site_name", :content => "Brmlab"}
+    %meta{:property => "og:description", :content => "Brmlab is a non-profit, community-run hackerspace in Prague. We provide a space where people who make things can come to share tools and knowledge."}
+
+    %script{:type => "application/ld+json"}
+      {
+      "@context" : "http://schema.org",
+      "@type" : "Organization",
+      "name" : "Brmlab",
+      "url" : "https://brmlab.cz",
+      "sameAs" : [
+      "https://www.facebook.com/brmlab",
+      "https://twitter.com/brmlab"
+      ],
+      "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Prague 3, Czech republic",
+      "postalCode": "130 00",
+      "streetAddress": "Pod Kaplièkou 20"
+      },
+      "email": "rada@brmlab.cz"
+      }
   %body
     / !!! Do not edit the .html files in /var/www. Use nanoc in /root/web and don't forget to commit to git! !!!
     / !!! Every time a generated html file is manually edited god kills a kitten!
     #main
       = yield
     #sidebar
-      %a{:href => "/index.html"}
-        %img{:src => "/brmlab.png", :width => "192", :height => "44"}
+      %a{:href => "/"}
+        %img{:src => "/brmlab.png", :width => "192", :height => "44", :alt => "Brmlab logo"}
       %ul
         %li
-          %a{:href => "/index.html"} About
+          %a{:href => "/"} About
         %li
           %a{:href => "/place"} Visit Us
         %li
-          %a{:href => "/index-join.html"} Join
+          %a{:href => "/join.html"} Join
         %li
           %a{:href => "/events"} Events
         %li
-          %a{:href => "/index-organisation.html"} Organisation
+          %a{:href => "/organisation.html"} Organisation
         %li
-          %a{:href => "/index-donate.html"} Donate
+          %a{:href => "/donate.html"} Donate
         %li
-          %a{:href => "/index-press.html"} Press
+          %a{:href => "/press.html"} Press
       %ul
         %li
           %a{:href => "/start"} Wiki
 
       %a{ :href => "/lists" }
-        %img{ :src => "/mailinglist.png" }
+        %img{ :src => "/mailinglist.png", :alt => "mailinglist icon" }
       %a{ :href => "https://web.libera.chat/?nick=brm?#brmlab" }
-        %img{ :src => "/irc.png" }
+        %img{ :src => "/irc.png", :alt => "irc icon" }
       %a{ :href => "http://twitter.com/brmlab" }
-        %img{ :src => "/twitter.png" }
+        %img{ :src => "/twitter.png", :alt => "twitter icon" }
       %a{ :href => "http://facebook.com/brmlab" }
-        %img{ :src => "/facebook.png" }
+        %img{ :src => "/facebook.png", :alt => "facebook icon" }
       %br
 
       %a{ :href => "http://github.com/brmlab" }
-        %img{ :src => "/github.png" }
+        %img{ :src => "/github.png", :alt => "github icon" }
       -# %a{ :href => "http://nat.brmlab.cz/phtagr/" }
         -# %img{ :src => "/phtagr.png" }
       %a{ :href => "http://flickr.com/photos/brmlab" }
-        %img{ :src => "/flickr.png" }
+        %img{ :src => "/flickr.png", :alt => "flickr icon" }
       %a{ :href => "javascript:alert('+420 608 801 582');" }
-        %img{ :src => "/phone.png" }
+        %img{ :src => "/phone.png", :alt => "telephone icon" }
       -# %br
       %a{ :href => "https://discord.gg/4qMfFKa" }
-        %img{ :src => "/discord.png" }
+        %img{ :src => "/discord.png", :alt => "discord icon" }
 
       %br
       %iframe{:src => "/status-renderer/lab-status.php", :style => "width:75%; height:250px", :frameborder => "0", :scrolling => "no", :align => "right"}

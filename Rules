@@ -30,24 +30,24 @@ route '/stylesheet/' do
   '/style.css'
 end
 
-route '/index-donate/' do
-  '/index-donate.html'
+route '/donate/' do
+  '/donate.html'
 end
 
-route '/index-events/' do
-  '/index-events.html'
+route '/events/' do
+  '/events.html'
 end
 
-route '/index-join/' do
-  '/index-join.html'
+route '/join/' do
+  '/join.html'
 end
 
-route '/index-organisation/' do
-  '/index-organisation.html'
+route '/organisation/' do
+  '/organisation.html'
 end
 
-route '/index-press' do
-  '/index-press.html'
+route '/press' do
+  '/press.html'
 end
 
 route '*' do
