@@ -1,1 +1,3 @@
+User-agent: *
+Disallow:
 Sitemap: https://brmlab.cz/sitemap.xml
